@@ -37,6 +37,7 @@ namespace bich2.Controllers
         }
 
         // GET: NhanViens/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.MaTinhThanh = new SelectList(db.TinhThanhs, "MaTinhThanh", "TenTinhThanh");
@@ -62,6 +63,7 @@ namespace bich2.Controllers
         }
 
         // GET: NhanViens/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -95,6 +97,7 @@ namespace bich2.Controllers
         }
 
         // GET: NhanViens/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
