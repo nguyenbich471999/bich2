@@ -15,6 +15,13 @@ namespace bich2.Controllers
         {
             return View();
         }
+        public ActionResult Login(string returnUrl)
+        {
+            ViewBag.returnUrl = returnUrl;
+            return View();
+        }
+        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(Account acc, string returnUrl)
